@@ -34,8 +34,12 @@
           return Math.floor(Math.random() * max);
         }
         
+        function outPut(){
+          return Math.round(getRandomInt(100))
+        }
+        
         setInterval(function() {
-          addData(myChart, 'Продано', getRandomInt(100));
+          addData(myChart, 'Продано', outPut());
         }, 1000);
         
         function addData(chart, label, data) {
