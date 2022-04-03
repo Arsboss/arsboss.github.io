@@ -7,12 +7,6 @@
       </div>
       <script>
         const labels = [
-          'Продано',
-          'Продано',
-          'Продано',
-          'Продано',
-          'Продано',
-          'Продано',
           'Продано'
         ];
         
@@ -37,7 +31,7 @@
         );
         
         setInterval(function() {
-          addData(myChart, 1, 20);
+          addData(myChart, 1, Math.random());
         }, 1000);
         
         function addData(chart, label, data) {
