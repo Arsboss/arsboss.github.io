@@ -31,14 +31,13 @@
         );
         
         function getRandomInt(max) {
-          return Math.floor(Math.random() * max);
+          var x = Math.floor(Math.random() * max);
+          return Math.round(x/100)*100
         }
         
         
         setInterval(function() {
-          var x = Number("0");
-          while(x > 100){var x = x+2};
-          addData(myChart, 'Продано', x);
+          addData(myChart, 'Продано', Math.round(getRandomInt(100)));
         }, 1000);
         
         function addData(chart, label, data) {
