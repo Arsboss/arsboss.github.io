@@ -30,8 +30,12 @@
           document.getElementById('myChart'), config
         );
         
+        function getRandomInt(max) {
+          return Math.floor(Math.random() * max);
+        }
+        
         setInterval(function() {
-          addData(myChart, 'Продано', Math.random());
+          addData(myChart, 'Продано', getRandomInt(100));
         }, 1000);
         
         function addData(chart, label, data) {
