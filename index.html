@@ -36,7 +36,7 @@
         
         var x = Number("0");
         setInterval(function() {
-          while(x > 100){var x = parseInt(x)+2};
+          while(x > 100){var x = x+2};
           addData(myChart, 'Продано', x);
         }, 1000);
         
