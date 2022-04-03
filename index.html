@@ -5,6 +5,31 @@
       <div>
         <canvas id="myChart"></canvas>
       </div>
+      <script>
+        const labels = [
+          'Насос'
+        ];
+        
+        const data = [
+          labels: labels,
+          datasets: [{
+            label: 'Отчет об продаже насосов',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [10, 20, 30, 40, 50, 10, 1]
+          }]
+        ];
+        
+        const config = {
+          type: 'line',
+          data: data,
+          options: {}
+        };
+        
+        const myChart = new Chart(
+          document.getElementById('myChart'), config
+        );
+      </script>
     </body>
   </head>
 </html>
