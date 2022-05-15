@@ -1,52 +1,11 @@
 <html>
   <head>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="http://vkontakte.ru/js/api/openapi.js"></script>
     <body>
-      <div>
-        <canvas id="myChart"></canvas>
-      </div>
-      <script>
-        const labels = [
-          'Состояние'
-        ];
-        
-        const data = {
-          labels: labels,
-          datasets: [{
-            label: 'Бюджет ©BossNasos',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [0]
-          }]
-        };
-        
-        const config = {
-          type: 'line',
-          data: data,
-          options: {}
-        };
-        
-        const myChart = new Chart(
-          document.getElementById('myChart'), config
-        );
-        
-        function getRandomInt(max) {
-          var x = Math.floor(Math.random() * max);
-          return Math.round(x/10)*10;
-        }
-        
-        
-        setInterval(function() {
-          addData(myChart, 'Состояние', Math.round(getRandomInt(50)));
-        }, 2500);
-        
-        function addData(chart, label, data) {
-            chart.data.labels.push(label);
-            chart.data.datasets.forEach((dataset) => {
-            dataset.data.push(data);
+      <script type="text/javascript">
+        VK.Init({
+          apiId: 8167591
         });
-    chart.update();
-    }
       </script>
     </body>
   </head>
