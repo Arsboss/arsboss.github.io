@@ -6,6 +6,13 @@
         VK.init({
           apiId: 8167591
         });
+        
+        VK.Widgets.Auth("vk_auth",{
+          width:"500px",
+          onAuth:function(data){
+            console.log(data)
+          }
+        });
       </script>
     </body>
   </head>
